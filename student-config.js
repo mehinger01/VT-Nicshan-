@@ -13,19 +13,23 @@
 
 const STUDENT_CONFIG = {
   // Student's first name (used everywhere on the site)
-  name: "Student",
+  name: "Nicshan",
 
   // Grade level, as a string (e.g. "7", "10", "College Freshman")
-  grade: "10",
+  grade: "9",
 
   // Differentiation level — controls wording, scaffolding, and tone
   level: "high", // middle | high | launch
 
   // Current coaching priorities — short phrases, shown on the Home page
   priorities: [
-    "task initiation",
-    "planning",
-    "reading retention"
+  "planning and organization",
+  "assignment tracking",
+  "task initiation",
+  "time management",
+  "focus and distraction control",
+  "study and retention strategies",
+  "recovery when behind"
   ],
 
   // Optional — known interests, used only to make examples feel relevant.
