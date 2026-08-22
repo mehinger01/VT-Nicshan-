@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Executive functioning coaching site — personalized via student-config.js.">
+<title>EF Coaching Site</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <div class="brand">
+      <div class="mark">EF</div>
+      <div class="brand-text"><b id="brandName">Student</b><small>Executive Functioning Coaching</small></div>
+    </div>
+    <nav class="tabs">
+      <button class="active" data-tab="home">Home</button>
+      <button data-tab="current-session">Current Session</button>
+      <button data-tab="roadmap">Roadmap</button>
+      <button data-tab="toolkit">Toolkit</button>
+      <button data-tab="notes">Session Notes</button>
+      <button data-tab="planner">Planner</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="home" class="tab-panel active"><div id="home-content"></div></section>
+  <section id="current-session" class="tab-panel"><div id="current-session-content"></div></section>
+  <section id="roadmap" class="tab-panel"><div id="roadmap-content"></div></section>
+  <section id="toolkit" class="tab-panel"><div id="toolkit-content"></div></section>
+  <section id="notes" class="tab-panel"><div id="notes-content"></div></section>
+  <section id="planner" class="tab-panel"><div id="planner-content"></div></section>
+</main>
+
+<footer class="site-footer wrap">EF Coaching Site · Built from the VT-EF-Student-Template</footer>
+
+<script src="student-config.js?v=1"></script>
+<script src="content.js?v=1"></script>
+<script>
+  document.title = (window.STUDENT_CONFIG ? STUDENT_CONFIG.name + "'s EF Coaching Site" : "EF Coaching Site");
+  document.addEventListener("DOMContentLoaded", () => {
+    const el = document.getElementById("brandName");
+    if (el && window.STUDENT_CONFIG) el.textContent = STUDENT_CONFIG.name + "'s EF Site";
+  });
+</script>
+<script src="app.js?v=1"></script>
+</body>
+</html>
